@@ -1,0 +1,8 @@
+# Qt/CMake gereksizleri
+/build/
+/.qtcreator/
+CMakeLists.txt.user
+*.exe
+*.dll
+*.o
+*.obj
