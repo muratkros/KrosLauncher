@@ -12,7 +12,7 @@ Window {
     ListModel { id: gameModel }
     property int currentIndex: 0
 
-    // --- ARKA PLAN (STABİL NEON) ---
+    // Arka Plan
     Rectangle {
         anchors.fill: parent; color: "#050505"; z: -1
         Rectangle {
@@ -32,7 +32,7 @@ Window {
 
     Component.onCompleted: refresh()
 
-    // --- ÜST BAR ---
+    // Üst Bar
     Rectangle {
         id: header; width: parent.width; height: 60; color: "#0d0d0d"; z: 10
         RowLayout {
@@ -68,7 +68,7 @@ Window {
         }
     }
 
-    // --- OYUN VİTRİNİ ---
+    //  Oyun Vitrini
     Rectangle {
         id: vitrinArea; anchors.top: header.bottom; width: parent.width; height: 130; color: "#cc080808"
         ListView {
@@ -95,11 +95,11 @@ Window {
         }
     }
 
-    // --- ANA EKRAN VE REHBER ---
+    // Ana ekran ve rehber
     Item {
         anchors.top: vitrinArea.bottom; anchors.bottom: parent.bottom; anchors.left: parent.left; anchors.right: parent.right
 
-        // REHBER (Oyun Yoksa Gözükür)
+        // REHBER (Kullancılar ilk başta ne yapıcaklarını anlasınlar diye ekledim)
         Column {
             anchors.centerIn: parent
             visible: gameModel.count === 0
@@ -114,7 +114,7 @@ Window {
             }
         }
 
-        // ANA PANEL (Oyun Varsa Gözükür)
+        // Ana Panel
         RowLayout {
             anchors.centerIn: parent; spacing: 80; visible: gameModel.count > 0
             Rectangle {

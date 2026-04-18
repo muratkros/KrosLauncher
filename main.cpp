@@ -1,7 +1,7 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
-#include <QQuickStyle> // Stil hatasını çözen kahraman
+#include <QQuickStyle>
 #include <QProcess>
 #include <QFile>
 #include <QJsonDocument>
@@ -85,8 +85,6 @@ public:
 
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
-
-    // Uygulama stilini 'Basic' yap ki butonlarımızı boyayabilelim
     QQuickStyle::setStyle("Basic");
 
     app.setWindowIcon(QIcon(":/KrosLauncher/icon.ico"));
